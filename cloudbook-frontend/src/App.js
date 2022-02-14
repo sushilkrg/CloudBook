@@ -1,10 +1,23 @@
 import './App.css';
+// import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Cloudbook - React app</h1>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        {/* Here used react router dom v6 structure */}
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
