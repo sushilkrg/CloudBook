@@ -1,6 +1,7 @@
-import React from 'react'
+import Notes from './Notes';
 
 const Home = () => {
+    
     return (
         <div>
             <div className="container my-3">
@@ -9,7 +10,7 @@ const Home = () => {
                 <form className='my-3'>
                     <div className="mb-3">
                         <label for="exampleInputEmail1" className="form-label">Title</label>
-                        <input type="text" className="form-control" id="exampleInputEmail1"/>
+                        <input type="text" className="form-control" id="exampleInputEmail1" />
                     </div>
                     <div className="mb-3">
                         <label for="exampleInputPassword1" className="form-label">Description</label>
@@ -19,9 +20,8 @@ const Home = () => {
                 </form>
             </div>
 
-            <div className="container">
-                <h1>Your Notes</h1>
-            </div>
+             {/* Called Notes components */}
+            <Notes/>
         </div>
     )
 }

@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React from 'react'
 
 const About = () => {
 
+    // eslint-disable-next-line
     return (
         <div>
             This is About page.
