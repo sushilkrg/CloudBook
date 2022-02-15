@@ -3,7 +3,25 @@ import React from 'react'
 const Home = () => {
     return (
         <div>
-            This is Home.
+            <div className="container my-3">
+
+                <h1>Add a Note</h1>
+                <form className='my-3'>
+                    <div className="mb-3">
+                        <label for="exampleInputEmail1" className="form-label">Title</label>
+                        <input type="text" className="form-control" id="exampleInputEmail1"/>
+                    </div>
+                    <div className="mb-3">
+                        <label for="exampleInputPassword1" className="form-label">Description</label>
+                        <input type="text" className="form-control" id="exampleInputPassword1" />
+                    </div>
+                    <button type="submit" className="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+            <div className="container">
+                <h1>Your Notes</h1>
+            </div>
         </div>
     )
 }
