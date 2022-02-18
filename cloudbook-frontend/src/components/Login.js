@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useNavigate } from "react-router-dom";
 // in react router dom v6 useHistory is replaced with useNavigate
 
-const Login = () => {
+const Login = (props) => {
   
   const [credentials, setCredentials] = useState({email: "", password: ""});
 
@@ -24,9 +24,10 @@ const Login = () => {
       // save the auth tokenn and redirect
       localStorage.setItem('token', json.authtoken);
       navigate("/");
+      props.showAlert("Account Created Successfully", "success");
     }
     else{
-      alert("invalid credentials");
+      props.showAlert("Invalid Credentials", "danger");
     }
   }
 
