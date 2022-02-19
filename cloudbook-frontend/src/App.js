@@ -1,6 +1,6 @@
 import './App.css';
 // import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -29,13 +29,20 @@ function App() {
           <Navbar />
           <Alert alert={alert} />
           <div className="container">
-            {/* Here I have used react router dom v6 structure */}
-            <Routes>
-              <Route path='/' element={<Home showAlert={showAlert}/>} />
-              <Route path='/about' element={<About />} />
-              <Route path='/login' element={<Login showAlert={showAlert}/>} />
-              <Route path='/signup' element={<Signup showAlert={showAlert}/>} />
-            </Routes>
+            <Switch>
+              <Route exact path="/">
+                <Home showAlert={showAlert} />
+              </Route>
+              <Route exact path="/about">
+                <About />
+              </Route>
+              <Route exact path="/login">
+                <Login showAlert={showAlert} />
+              </Route>
+              <Route exact path="/signup">
+                <Signup showAlert={showAlert} />
+              </Route>
+            </Switch>
           </div>
         </Router>
       </NoteState>
